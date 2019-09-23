@@ -1,42 +1,21 @@
-doctype html 
+doctype html
 html(lang='en')
   include common/head.pug
   +head("Starter MVP")
   body
-    header 
+    header
       include common/navbar.pug
-      +navbar()
+      +navbar(user)
       .container
-        .row
-          .col-md-6
-            h1.mb-3 Minimum Viable Landing Page 
-            p.lead Learning how to create a NodeJS Web app 
-            p.lead.mb-4 Learning how to launch a landing page to collect sales leads
+        .row.align-items-center
+          .col-md-6.order-md-1.text-center.text-md-left.pr-md-5
+            h1.mb-3 Welcome to my first Node JS Web Application
+            p.lead A tutorial was followed which has allowed the creation of this CRUD app
+            p.lead.mb-4 Learned how to launch a landing page and start collecting sales leads.
             form(action="/", method="POST")
               .input-group.mb-3
                 input(name="lead_email", type="email", placeholder="Enter your email address").form-control
                 .input-group-append
-                  button(type="submit").btn.btn-primary Get Started
-      .row
-        .col-md-6
-          if leads
-            h1 Leads
-            table.table
-              thead
-                tr
-                  th(scope="col") Email
-                  th(scope="col") Actions
-                  th(scope="col")
-                tr
-              tbody                
-                for lead in leads
-                  tr(id=lead.id)
-                    td
-                      span #{lead.email}
-                    td
-                      a(href="/lead/" + lead.id) Details
-                    td 
-                      button(onclick=`deleteLead('${lead.id}')`).btn.btn-primary Delete
+                  button(type="submit").btn.btn-primary Submit Lead
     include common/footer.pug
     +footer()
-    script(src='/javascripts/leads.js')
