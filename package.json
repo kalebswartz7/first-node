@@ -6,18 +6,13 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "bcrpyt": "^2.0.0",
-    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "express-session": "^1.16.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "passport-local": "^1.0.0",
     "pg": "^7.12.1",
     "pug": "2.0.0-beta11",
-    "sequelize": "^5.18.4",
-    "validator": "^11.1.0"
+    "sequelize": "^5.18.4"
   }
 }
